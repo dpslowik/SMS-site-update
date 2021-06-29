@@ -1,21 +1,32 @@
 
 /* Custom default button */
-.btn-secondary,
+.btn-secondary{
+    margin-top: 10px;
+}
 .btn-secondary:hover {
-  color: rgb(255, 254, 254);
+  color: #fff;
 }
 .btn-secondary:focus {
-  color: #333;
+  color:lightcoral;
   text-shadow: none; /* Prevent inheritance from `body`*/ 
   background-color: #fff;
   border: .05rem solid #fff;
 }
 
+/* NAV BAR */
+.navbar {background-color: #fff;} /* bs primary blue = #007bff*/
+.navbar-nav {font-size: 25px; font-weight: 700;}
+.nav-link {color:#333; filter:opacity(35%);}
+.nav-link.active {color:#333; filter: opacity(100%);}
+.navbar-toggler {filter: opacity(100%), brightness(200%);background-color:lightgray; visibility: visible;}
+.navbar-toggler-icon {background-image: url('hamburger.gif'); visibility:visible; filter: opacity(50%);}
+
+
 /* HERO */
 .sms-hero {background-image: url('LongsPeak.jpg');margin-bottom: 0; height: 600px; background-size: cover; background-position: center center; text-align: center;}
 .sms-hero h1,
 .sms-hero h2 {font-size: 63px; font-weight: 700; margin: 0; flex: inherit; line-height: 0.9;}
-.sms-hero p.lead {letter-spacing: 2px; font-weight: 700;}
+.sms-hero p.lead {letter-spacing: 2px; font-weight: 700;margin-top: 10px;}
 
 @media only screen and  (min-width: 1200px) {
     .sms-hero .container {max-width: 1170px;}
@@ -23,12 +34,28 @@
 @media only screen and (max-width: 768px) {
     .sms-hero {margin-bottom: 0; padding-bottom: 0; background-position: 90%; height: 400px; background-size: cover;}
     .sms-hero h1 {left: 0;}
-    .sms-hero h2 ,  .sms-hero p.lead {color: turquoise;}
-    .sms-hero p.lead {margin-top: 5px; margin-bottom: 0;}
+    .sms-hero h2,
+    .sms-hero p.lead {
+        color:#ffe;
+        /* this adds a black outline to the text */
+        text-shadow: #333 -1px 1px 2px,
+                     #333 1px -1px 2px,
+                     #333 1px 1px 2px,
+                     #333 -1px -1px 2px;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
 }
 @media only screen and (max-width: 480px) {
     .sms-hero h1, .sms-hero h2 {font-size: 55px;}
-    .sms-hero p.lead {color: red;}
+    .sms-hero p.lead {
+        color:#ffe;
+        /* this adds a black outline to the text */
+        text-shadow: #333 -1px 1px 2px,
+                     #333 1px -1px 2px,
+                     #333 1px 1px 2px,
+                     #333 -1px -1px 2px;
+    }
 }
 /* courseinfo_HERO */
 .sms-courseinfo {background-image: url('SunsetWide.jpg');margin-bottom: 0; height: 500px; background-size: cover; background-position: center center; text-align: center;}
@@ -36,30 +63,32 @@
 .sms-courseinfo h2 {font-size: 70px; font-weight: 700; margin: 0; flex: inherit; line-height: 0.9; color: gold;}
 .sms-courseinfo p.lead {letter-spacing: 2px; font-weight: 700;}
 
+/* COURSEINFO 1ST CHUNK */
+.sms-courseinfo-1p {background-image: url('Columbine.jpg');margin-bottom: 0; height: 200px; background-size: cover; background-position: center center; text-align: center;}
+.sms-courseinfo-1 h1 {font-size: 40px; font-weight: 700; color: royalblue;}
+.sms-courseinfo-1 h2 {font-size: 20px; font-weight: 700; text-align: justify; margin-top: 10px;}
+.sms-courseinfo-1 h3 {font-size: 30px; font-weight: 700; color: royalblue;text-align: right;padding-right: 5%;}
+/* COURSEINFO 2ND CHUNK */
+.sms-courseinfo-2p {background-image: url('Columbine.jpg');margin-bottom: 0; height: 200px; background-size: cover; background-position: center center; text-align: center;}
+.sms-courseinfo-2 h1 {font-size: 40px; font-weight: 700; color: limegreen;}
+.sms-courseinfo-2 h2 {font-size: 20px; font-weight: 700; text-align: justify;}
+
 @media only screen and  (min-width: 1200px) {
     .sms-courseinfo .container {max-width: 1170px;}
 }
 @media only screen and (max-width: 768px) {
     .sms-courseinfo {margin-bottom: 0; padding-bottom: 0; background-position: 100%; height: 400px; background-size: cover;}
     .sms-courseinfo h1 {left: 0;}
-    .sms-courseinfo h2 {color: turquoise;}
-    .sms-courseinfo p.lead {color: turquoise;}
+    .sms-courseinfo h2 {color:black;}
+    .sms-courseinfo p.lead {color:#333;}
     .sms-courseinfo p.lead {margin-top: 5px; margin-bottom: 0;}
 }
 @media only screen and (max-width: 480px) {
     .sms-courseinfo {margin-bottom: 0; padding-bottom: 0; background-position: 100%; height: 200px; background-size: cover;}
     .sms-courseinfo h1, .sms-courseinfo h2 {font-size: 30px;}
-    .sms-courseinfo p.lead {color: red;}
+    .sms-courseinfo-1 h3 {font-size: 30px; font-weight: 700; color: royalblue;text-align: center}
+    .sms-courseinfo p.lead {color:black;}
 }
-/* COURSEINFO 1ST CHUNK */
-.sms-courseinfo-1p {background-image: url('Columbine.jpg');margin-bottom: 0; height: 200px; background-size: cover; background-position: center center; text-align: center;}
-.sms-courseinfo-1 h1 {font-size: 40px; font-weight: 700; color: royalblue;}
-.sms-courseinfo-1 h2 {font-size: 20px; font-weight: 700; text-align: justify;}
-.sms-courseinfo-1 h3 {font-size: 30px; font-weight: 700; text-align: center; color: royalblue;}
-/* COURSEINFO 2ND CHUNK */
-.sms-courseinfo-2p {background-image: url('Columbine.jpg');margin-bottom: 0; height: 200px; background-size: cover; background-position: center center; text-align: center;}
-.sms-courseinfo-2 h1 {font-size: 40px; font-weight: 700; color: limegreen;}
-.sms-courseinfo-2 h2 {font-size: 20px; font-weight: 700; text-align: justify;}
 /* CONTACT */
 .sms-contact {background-image: url('LongsPeak.jpg');margin-bottom: 0; height: 700px; background-size: cover; background-position: center center; text-align: center;}
 .sms-contact h1,
@@ -72,13 +101,13 @@
 @media only screen and (max-width: 768px) {
     .sms-contact {margin-bottom: 0; padding-bottom: 0; background-position: 90%; height: 800px; background-size: cover;}
     .sms-contact h1 {left: 0;}
-    .sms-contact h2 ,  .sms-contact p.lead {font-size: 25px; color: turquoise;}
+    .sms-contact h2 ,  .sms-contact p.lead {font-size: 25px; color: black;}
     .sms-contact p.lead {margin-top: 5px; margin-bottom: 0;}
 }
 @media only screen and (max-width: 480px) {
     .sms-contact {height: 900px; background-size: cover; background-position: 90%;}
-    .sms-contact h1, .sms-contact h2 {font-size: 20px; color: red;}
-    .sms-contact p.lead {color: red;}
+    .sms-contact h1, .sms-contact h2 {font-size: 20px; color:black;}
+    .sms-contact p.lead {color:black;}
 }
 /* REPOSITORY */
 .sms-articleindex {text-align: left; }
@@ -138,19 +167,25 @@
 @media only screen and (max-width: 768px) {
     .sms-contact {margin-bottom: 0; padding-bottom: 0; background-position: 90%; height: 800px; background-size: cover;}
     .sms-contact h1 {left: 0;}
-    .sms-contact h2 ,  .sms-contact p.lead {font-size: 25px; color: turquoise;}
+    .sms-contact h2 ,  .sms-contact p.lead {font-size: 25px; color: black;}
     .sms-contact p.lead {margin-top: 5px; margin-bottom: 0;}
 }
 @media only screen and (max-width: 480px) {
     .sms-contact {height: 900px; background-size: cover; background-position: 90%;}
-    .sms-contact h1, .sms-contact h2 {font-size: 20px; color: red;}
-    .sms-contact p.lead {color: red;}
+    .sms-contact h1, .sms-contact h2 {font-size: 20px; color:black;}
+    .sms-contact p.lead {color:black;}
 }
 /* ABOUT_HERO */
 .sms-about {background-image: url('Fishing.jpg');margin-bottom: 0; height: 500px; background-size: cover; background-position: center center; text-align: center;}
 .sms-about h1,
 .sms-about h2 {font-size: 70px; font-weight: 700; margin: 0; flex: inherit; line-height: 0.9; color: gold;}
 .sms-about p.lead {letter-spacing: 2px; font-weight: 700;}
+
+/* ABOUT_1ST_CHUNK */
+.sms-about-2 {background-image: url('Columbine.jpg');margin-bottom: 0; height: 200px; background-size: cover; background-position: center center; text-align: center;}
+.sms-about-1 h1 {font-size: 40px; font-weight: 700; color: royalblue;}
+.sms-about-1 h2 {font-size: 20px; font-weight: 700;color: #333; text-align: left;outline: 5px inset;outline-color: #a0a0a0;background-color:lightgrey; margin-top: 10px;padding-top: 5px; padding-bottom: 5px;}
+.btn-outline-info{margin-top: 10px;}
 
 @media only screen and  (min-width: 1200px) {
     .sms-about .container {max-width: 1170px;}
@@ -166,11 +201,9 @@
     .sms-about {margin-bottom: 0; padding-bottom: 0; background-position: 100%; height: 200px; background-size: cover;}
     .sms-about h1, .sms-about h2 {font-size: 30px;}
     .sms-about p.lead {color: red;}
+    .sms-about-1 h2 {font-size: 20px; font-weight: 700; text-align: left;outline: none;background:none;}
 }
-/* ABOUT_1ST_CHUNK */
-.sms-about-2 {background-image: url('Columbine.jpg');margin-bottom: 0; height: 200px; background-size: cover; background-position: center center; text-align: center;}
-.sms-about-1 h1 {font-size: 40px; font-weight: 700; color: royalblue;}
-.sms-about-1 h2 {font-size: 20px; font-weight: 700; text-align: left;}
+
 
 /* CAROUSEL */
 .carousel-inner h5{font-size: 63; color: black;}
@@ -196,7 +229,7 @@
 
 /*CSS FOR SELECT BUTTONS*/
 .selectNext {margin-right: 20px; background: lightblue;}
-#buttonArea {background: #007bff;}
+#buttonArea {background: #fff}/*bootstrap primary = 007bff*/
 
 /* FOOTER */
 footer {background: black; position: relative; z-index: 0; min-height: 240px;}
@@ -204,12 +237,12 @@ footer:after {content: ""; background: #a0a0a0; width: 100%; position: absolute;
 
 footer .sms-footer--category {flex-wrap: wrap; padding: 20px 15px;}
 
-footer .sms-footer--links a {color: white; text-transform: uppercase; font-size: 12px; display: block; padding: 0 0 4px; text-align: left;}
+footer .sms-footer--links a {color: white; text-transform: uppercase; font-size: 20px; display: block; padding: 0 0 4px; text-align: left;}
 footer .sms-footer--links a:hover {text-decoration: underline;}
 footer .sms-footer--links.active .sms-footer--header {margin-bottom: 5px;}
 footer .sms-footer--links.active ul {display: block;}
 
-footer .sms-footer--copyright {color: blue; }
+footer .sms-footer--copyright {color: blue; filter: invert(25%);}
 
 @media only screen and (min-width: 992px) {
     footer {flex-wrap: wrap;padding: 40px 15px;}
