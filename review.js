@@ -224,7 +224,7 @@ function noParameters(){
         getWords(reviewText[count1], backgroundPics[count1]);
 
     }
-    else if(window.innerWidth>480 && window.innerWidth<=768){
+    else if(window.innerWidth>480 && window.innerWidth<=900){
         console.log('landscape view');
         eraseChildren();
         noOverlay.setAttribute('class', 'letter');
@@ -235,7 +235,7 @@ function noParameters(){
         addPictOnly.appendChild(noOverlay);
 
     }
-    else if(window.innerWidth>768){
+    else if(window.innerWidth>900){
         console.log('desktop view');
         eraseChildren();
         noOverlay.setAttribute('class', 'letter');
